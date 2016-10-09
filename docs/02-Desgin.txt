@@ -1,0 +1,17 @@
+界面的设计
+1. 主界面
+    侧滑菜单
+    CoordinatorLayout
+    TabLayout
+    ViewPager
+    Fragment(每一个Fragment都包含下拉刷新)
+
+2.主界面子栏目(一级Fragment)
+    直播: LiveFragment
+    推荐: RecommendFragment
+    番剧: MovieFragment
+    分区: CateGoryFragment
+    关注: FollowFragment
+    发现: DiscoveryFragment
+
+

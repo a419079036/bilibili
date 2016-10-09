@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_main_homepage"
+        android:title="@string/homepage"
+        />
+
+    <item
+        android:id="@+id/action_main_offline"
+        android:title="@string/cache"
+        />
+
+    <item
+
+        android:id="@+id/action_main_fav"
+        android:title="@string/fav"
+        />
+
+</menu>
