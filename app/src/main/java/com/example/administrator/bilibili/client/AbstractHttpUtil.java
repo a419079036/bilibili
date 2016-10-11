@@ -32,5 +32,12 @@ public   abstract  class AbstractHttpUtil
 
     protected abstract byte[] doGetData(String url);
 
-
+    /**
+     * 异步的GET请求,请求在子线程中
+     *
+     * @param url
+     * @return
+     */
+     public  abstract   void doGetDataAsync(String url,HttpCallback httpCallback);
+    //接口回调,谁实现谁去调用
 }

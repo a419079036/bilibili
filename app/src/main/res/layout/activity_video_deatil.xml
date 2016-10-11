@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_video_deatil"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.bilibili.activity.VideoDeatilActivity">
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">-->
+
+    <!--内容区-->
+
+
+    <!--是一个垂直的linerLayout-->
+    <android.support.design.widget.AppBarLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        >
+
+        <!--设置标题需要调用-->
+        <!--在一级子控件可以指定layout_scrollFlags-->
+        <!--contentScrim可以指定颜色 图片-->
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="#e8b7ae"
+            app:layout_scrollFlags="enterAlways|scroll"
+            app:scrimVisibleHeightTrigger="50dp">
+
+            <ImageView
+                android:id="@+id/Video_detail_cover"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:src="@mipmap/ic_launcher"
+                app:layout_collapseMode="parallax"
+                />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/Video_detail_Toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="?actionBarSize"
+                app:layout_collapseMode="pin">
+
+
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <!--tab简介与评论-->
+        <android.support.design.widget.TabLayout
+            android:id="@+id/Video_detail_TabLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+        </android.support.design.widget.TabLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <!--Nested嵌套的-->
+    <!--用于处理当前控件的时候,如何操作其他控件-->
+    <!--TODO:检查在viewPage中使用,能否滚动Toolbar-->
+    <android.support.v4.widget.NestedScrollView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F00"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <!--</LinearLayout>-->
+
+
+</android.support.design.widget.CoordinatorLayout>

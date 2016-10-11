@@ -10,7 +10,9 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.example.administrator.bilibili.adapter.CommonFragmentAdapter;
 import com.example.administrator.bilibili.fragment.BaseFragment;
@@ -83,15 +85,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item)
     {
+        Log.e("自定义标签", "类名==MainActivity" + "方法名==onNavigationItemSelected=====:" + "");
         switch (item.getItemId()) {
             case R.id.action_main_homepage:
                 // TODO: 需要切换当前主界面为Home界面
+                Toast.makeText(getApplicationContext(),"你点击了home界面",Toast.LENGTH_LONG).show();
                 break;
             case R.id.action_main_offline:
                 // TODO: 打开新的Activity
+                Toast.makeText(getApplicationContext(),"你点击了2界面",Toast.LENGTH_LONG).show();
+
                 break;
             case R.id.action_main_fav:
                 // TODO: 打开新的Activity
+                Toast.makeText(getApplicationContext(),"你点击了3界面",Toast.LENGTH_LONG).show();
+
                 break;
             default:
                 break;

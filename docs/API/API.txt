@@ -1,0 +1,172 @@
+Bilibili
+
+mzg5c15xu0yxjtxg
+
+jr3fcr8w7qey8wb0ty5bofurg2cmad8x
+
+
+appkey	1d8b6e7d45233436  //官方的app key在所有的请求中必须包含
+
+app secret //用于进行请求签名的.大部分API必须签名,否则,没有数据
+
+FamGR6I1OwSutCZ2CelYQTJznz42c7sBbJcC0YxGXToV8j14uk1+3VvTFEbyBZeW
+
+
+
+//通用的请求参数
+build	 420000   //软件版本号
+channel	bili       //渠道
+mobi_app	android //操作系统
+platform	android //设备
+screen	xxhdpi //屏幕密度
+ts	1476113271000  //时间戳 ,
+sign	78f58e6abf2f2db0bb20aee7f0a73e0a //数字签名的信息,自身不参与签名
+
+
+数字签名的规则, sign=Hex ((MD5)(key=value&key=value...value<appSecret>)).toLowCase()
+
+public abstract interface BiliApiService
+{
+  @RequestConfig(expires=0L)
+  @POST("/x/reply/action")
+  public abstract void actionFeedback(@Query("oid") int paramInt1, @Query("type") int paramInt2, @Query("rpid") int paramInt3, @Query("action") int paramInt4, Callback<Void> paramCallback);
+
+  @RequestConfig(expires=0L)
+  @FormUrlEncoded
+  @POST("/x/share/add")
+  public abstract void addShareHistory(@Field("aid") int paramInt, Callback<Void> paramCallback);
+
+  @RequestConfig(expires=0L)
+  @FormUrlEncoded
+  @POST("/x/v2/history/add")
+  public abstract void addVideoHistory(@Field("aid") int paramInt, Callback<Void> paramCallback);
+
+  @RequestConfig(expires=0L)
+  @POST("/x/v2/history/clear")
+  public abstract JSONObject clearVideoHistories()
+    throws VolleyError;
+
+  @RequestConfig(cacheKey=Config.CacheKeyType.RelativePathWithQueryParams, expires=120000L)
+  @GET("/index/rank/all-03.json")
+  public abstract void getAllRankVideoList(Callback<ats> paramCallback);
+
+  @RequestConfig(cacheKey=Config.CacheKeyType.RelativePathWithQueryParams, expires=120000L)
+  @GET("/index/rank/all-3-33.json")
+  public abstract void getBangumiRankVideoList(Callback<ats> paramCallback);
+
+  @RequestConfig(cacheKey=Config.CacheKeyType.RelativePathWithQueryParams, expires=120000L)
+  @GET("/index/rank/all-03-{tid}.json")
+  public abstract void getCategoryRankVideoList(@Path("tid") int paramInt, Callback<ats> paramCallback);
+
+  @RequestConfig(expires=0L)
+  @GET("/x/reply/captcha")
+  public abstract void getCommentCaptcha(Callback<JSONObject> paramCallback);
+
+  @RequestConfig(cacheKey=Config.CacheKeyType.RelativePathWithQueryParams, expires=360000L)
+  @GET("/spview")
+  public abstract void getEpisodeVideoList(@QueryMap j paramj, Callback<atf> paramCallback);
+
+  @GET("/x/reply/count")
+  public abstract void getFeedbackCount(@Query("oid") int paramInt1, @Query("type") int paramInt2, Callback<JSONObject> paramCallback);
+
+  @RequestConfig(expires=0L)
+  @GET("/x/reply")
+  public abstract void getFeedbackList(@QueryMap a parama, Callback<BiliFeedbackList> paramCallback);
+
+  @RequestConfig(expires=0L)
+  @GET("/x/reply/reply")
+  public abstract void getFeedbackReplyList(@QueryMap a parama, Callback<BiliFeedbackList> paramCallback);
+
+  @RequestConfig(cacheKey=Config.CacheKeyType.RelativePathWithQueryParams, expires=60000L, responseCacheIfNoConn=true)
+  @EndPoint("http://app.bilibili.com")
+  @GET("/x/region/show/two/old")
+  public abstract void getHotVideoList(@QueryMap c paramc, Callback<ats> paramCallback);
+
+  @RequestConfig(timeOut=5000)
+  @EndPoint("http://www.bilibili.com")
+  @GET("/index/ding/{tid}.json?page=1&pagesize=100")
+  public abstract void getIndex(@Path("tid") int paramInt, Callback<ats> paramCallback);
+
+  @EndPoint("http://www.bilibili.com")
+  @GET("/index/ding-count.json")
+  public abstract void getIndexCount(Callback<JSONObject> paramCallback);
+
+  @RequestConfig(cacheKey=Config.CacheKeyType.QueryParams, expires=120000L)
+  @EndPoint("http://live.bilibili.com")
+  @GET("/api/room_list")
+  public abstract void getLiveRoomList(@QueryMap d paramd, Callback<ast> paramCallback);
+
+  @RequestConfig(cacheKey=Config.CacheKeyType.RelativePathWithQueryParams, maxRetries=3, responseCacheIfNoConn=true)
+  @GET("/online_list")
+  public abstract void getOnlineList(@Query("typeid") int paramInt, Callback<ats> paramCallback);
+
+  @RequestConfig(cacheKey=Config.CacheKeyType.RelativePathWithQueryParams, expires=120000L)
+  @GET("/index/rank/origin-03.json")
+  public abstract void getOriginRankVideoList(Callback<ats> paramCallback);
+
+  @RequestConfig(expires=10000L)
+  @EndPoint("http://www.bilibili.com")
+  @GET("/index/ding/{tid}.json")
+  public abstract void getSmallIndex(@Path("tid") int paramInt, Callback<ats> paramCallback);
+
+  @RequestConfig(cacheKey=Config.CacheKeyType.RelativePathWithQueryParams, expires=360000L, responseCacheIfNoConn=true)
+  @GET("/sp")
+  public abstract void getSpecialInfo(@QueryMap i parami, Callback<atd> paramCallback);
+
+//获取视频详情:http://app.bilibili.com/x/view?plat=0&id=视频ID
+  @GET("/view")
+  public abstract void getVideoDetails(@Query("id") int paramInt, Callback<BiliVideo> paramCallback);
+
+
+
+
+
+
+获取视频详情
+
+https://app.bilibili.com/x/view?plat=0&aid=xxxxxxx
+
+@RequestConfig(cacheKey=Config.CacheKeyType.RelativePathWithQueryParams, expires=0L, maxRetries=3, responseCacheIfNoConn=true)
+  @EndPoint("https://app.bilibili.com")
+  @GET("/x/view")
+  public abstract void getVideoDetails(@QueryMap l paraml, Callback<BiliVideoDetail> paramCallback);
+
+  @RequestConfig(expires=0L)
+  @GET("/x/v2/history?pn=1&ps=200")
+  public abstract void getVideoHistoryList(Callback<atr> paramCallback);
+
+  @RequestConfig(cacheKey=Config.CacheKeyType.RelativePathWithQueryParams, expires=120000L)
+  @GET("/list")
+  public abstract void getVideoList(@QueryMap k paramk, Callback<ats> paramCallback);
+
+  @RequestConfig(cacheKey=Config.CacheKeyType.RelativePathWithQueryParams, expires=120000L)
+  @GET("/list")
+  public abstract void getVideoListByTid(@Query("page") int paramInt1, @Query("pagesize") int paramInt2, @Query("tid") int paramInt3, @Query("order") ListOrder paramListOrder, Callback<ats> paramCallback);
+
+  @RequestConfig(cacheKey=Config.CacheKeyType.RelativePathWithQueryParams, expires=120000L, responseCacheIfNoConn=true)
+  @GET("/list")
+  public abstract void getVideoListByUid(@Query("page") int paramInt1, @Query("pagesize") int paramInt2, @Query("mid") long paramLong, Callback<ats> paramCallback);
+
+  @RequestConfig(expires=0L)
+  @FormUrlEncoded
+  @POST("/x/share/first")
+  public abstract void reportFirstShareToday(@Field("type") int paramInt1, @Field("id") int paramInt2, Callback<Void> paramCallback);
+
+  @RequestConfig(expires=0L)
+  @EndPoint("http://api.bilibili.com")
+  @FormUrlEncoded
+  @POST("/comment/post")
+  public abstract JSONObject sendDanmaku(@Query("aid") String paramString1, @Query("cid") String paramString2, @Query("pid") String paramString3, @FieldMap Map<String, String> paramMap)
+    throws VolleyError;
+
+  @RequestConfig(expires=0L)
+  @FormUrlEncoded
+  @POST("/x/reply/add")
+  public abstract void sendFeedback(@FieldMap b paramb, Callback<JSONObject> paramCallback);
+
+  @RequestConfig(expires=0L, maxRetries=0)
+  @EndPoint("http://live.bilibili.com")
+  @FormUrlEncoded
+  @POST("/api/sendmsg")
+  public abstract JSONObject sendLiveDanmaku(@Query("aid") String paramString1, @Query("cid") String paramString2, @Query("pid") String paramString3, @FieldMap Map<String, String> paramMap)
+    throws VolleyError;
