@@ -1,6 +1,7 @@
 package com.example.administrator.bilibili;
 
 import android.app.Application;
+import android.util.Log;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.EventBusBuilder;
@@ -17,10 +18,8 @@ public class MainApplication extends Application
     @Override
     public void onCreate()
     {
-        //初始化方法一:
-     //   EventBus eventBus = EventBus.getDefault();
-
-        //自定义初始化
+        super.onCreate();
+        Log.e("自定义标签", "类名==MainApplication" + "方法名==onCreate=====:" + "");
         EventBusBuilder builder = EventBus.builder();
         builder.installDefaultEventBus();
     }

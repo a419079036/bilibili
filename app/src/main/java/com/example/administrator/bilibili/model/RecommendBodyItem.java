@@ -20,7 +20,7 @@ public class RecommendBodyItem extends RecommendItem implements Parcelable
     private String cover;
     @SerializedName("param")
     private String param;
-    @SerializedName("_goto")
+    @SerializedName("goto")
     private String _goto;
     @SerializedName("width")
     private int width;

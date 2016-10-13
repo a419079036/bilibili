@@ -2,11 +2,11 @@ package com.example.administrator.bilibili.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
 import com.example.administrator.bilibili.R;
+import com.example.administrator.bilibili.model.RecommendBodyItem;
 
 public class VideoDeatilActivity extends AppCompatActivity
 {
@@ -15,6 +15,7 @@ public class VideoDeatilActivity extends AppCompatActivity
      * 通常可以使用RecomBodyItem即可
      */
     public  static final String EXTRA_VIDEO_ITEM="video_item";
+    private RecommendBodyItem mrecommendBodyItem;
 
 
     @Override
@@ -30,8 +31,18 @@ public class VideoDeatilActivity extends AppCompatActivity
 
         }
         Intent intent=getIntent();
-        Parcelable parcelableExtra = intent.getParcelableExtra(EXTRA_VIDEO_ITEM);
+        mrecommendBodyItem = intent.getParcelableExtra(EXTRA_VIDEO_ITEM);
 
+
+
+    }
+
+
+
+    @Override
+    protected void onResume()
+    {
+        super.onResume();
 
     }
 }

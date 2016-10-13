@@ -118,10 +118,15 @@ public abstract interface BiliApiService
   public abstract void getVideoDetails(@Query("id") int paramInt, Callback<BiliVideo> paramCallback);
 
 
+视频播放地址 "http://interface.bilibili.com/playurl"
+cid=视频的 视频部分的cid数据
+quality=视频质量 可选择 1,2,3 1-代表hd
+otype=json|xml 默认不写就是xml mp4|
+type=获取的视频格式
 
-
-
-
+视频地址appkey : "4ebafd7c4951b366"
+00     """:  "8cb98205e9b2ad3669aad0fce12a4c13"
+sign=
 获取视频详情
 
 https://app.bilibili.com/x/view?plat=0&aid=xxxxxxx

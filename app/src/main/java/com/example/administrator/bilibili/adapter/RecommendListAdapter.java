@@ -36,22 +36,20 @@ public class RecommendListAdapter extends RecyclerView.Adapter
 
     private Context mContext;
     private List<RecommendItem> mItems;
-    private RecyclerView.ViewHolder viewHolder;
 
-    /* 1.RecyclerView.Adapter以viewHoder为视图复用的标准
-       2.RecyclerView不提供onItemClickListener
-       3.Adapter和baseAdapter.都提供多布局的支持
-
-    * */
-    public RecommendListAdapter(Context context, List<RecommendItem> items)
-    {
-        this.mContext = context;
+    public RecommendListAdapter(Context context, List<RecommendItem> items) {
+        mContext = context;
         this.mItems = items;
     }
 
+    /*
+     * 1.RecycleView Adapter  以ViewHolder 为视图复用的标准
+     * 2.RecycleView 不提供onItemClickListener 接口
+     * 3.Adapter 同BaseAdapter , 都提供多布局的支持
+     */
+
     @Override
-    public int getItemViewType(int position)
-    {
+    public int getItemViewType(int position) {
         int ret = 0;
         RecommendItem item = mItems.get(position);
         String type = item.getType();
@@ -82,8 +80,7 @@ public class RecommendListAdapter extends RecyclerView.Adapter
     }
 
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
-    {
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         RecyclerView.ViewHolder ret = null;
         LayoutInflater inflater = LayoutInflater.from(mContext);
         View itemView = null;
@@ -113,44 +110,36 @@ public class RecommendListAdapter extends RecyclerView.Adapter
     }
 
     /**
-     * 把数据绑定到ViewHoder指向的view中
+     * 把数据绑定到 ViewHolder 指向的View中
      *
      * @param holder
      * @param position
      */
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position)
-    {
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         RecommendItem recommendItem = mItems.get(position);
-        String type = recommendItem.getType();
-        if (holder instanceof SimpleViewHolder)
-        {
-            SimpleViewHolder simpleViewHoder = (SimpleViewHolder) holder;
-            simpleViewHoder.bindView(recommendItem);
-
+        if (holder instanceof SimpleViewHolder) {
+            SimpleViewHolder simpleViewHolder = (SimpleViewHolder) holder;
+            simpleViewHolder.bindView(recommendItem);
         }
-
     }
 
     @Override
-    public int getItemCount()
-    {
+    public int getItemCount() {
         int ret = 0;
-        if (mItems != null)
-        {
+        if (mItems != null) {
             ret = mItems.size();
-
         }
         return ret;
     }
+
     ///////////////////////////////////////////////////////////////////////////
-    // viewHolder
+    // ViewHolder
     ///////////////////////////////////////////////////////////////////////////
 
-    private static class SimpleViewHolder extends RecyclerView.ViewHolder
-    {
+    private static class SimpleViewHolder extends RecyclerView.ViewHolder {
         /**
-         * 通用的view缓存
+         * 通用的View缓存功能
          */
         private SparseArrayCompat<View> mViews;
 
@@ -159,25 +148,18 @@ public class RecommendListAdapter extends RecyclerView.Adapter
             mViews = new SparseArrayCompat<>();
         }
 
-        //为了减少findviewById的操作,复用
-         View getChildView(int rid)
-        {
-
-            View ret;
+        View getChildView(int rid) {
+            View ret = null;
             ret = mViews.get(rid);
-            if (ret == null)
-            {
+            if (ret == null) {
                 ret = itemView.findViewById(rid);
-                if (ret != null)
-                {
+                if (ret != null) {
                     mViews.put(rid, ret);
                 }
             }
-
             return ret;
-
-
         }
+
         /**
          * 动态获取View的方法,
          * 利用反射, 获取视图
@@ -209,20 +191,15 @@ public class RecommendListAdapter extends RecyclerView.Adapter
         }
 
         /**
+         * 用于绑定数据到视图
          *
          * @param recommendItem
          */
-        void bindView(RecommendItem recommendItem)
-        {
+        void bindView(RecommendItem recommendItem) {
             TextView txt = (TextView) getChildView(R.id.item_recommend_text);
-            if (txt!=null)
-            {
-                String headTitle = recommendItem.getHeadTitle();
-                txt.setText(headTitle);
-
-            }
-
+            txt.setText(recommendItem.getType());
         }
+
 
     }
 
@@ -252,7 +229,7 @@ public class RecommendListAdapter extends RecyclerView.Adapter
 
         @Override
         void bindView(RecommendItem recommendItem) {
-            TextView txtTitle = ((TextView) getChildView(R.id.item_recommend_header_title));
+            TextView txtTitle = ((TextView) getChildView(R.id.item_recommend_head_title));
             if (txtTitle != null) {
                 txtTitle.setText(recommendItem.getHeadTitle());
             }
@@ -310,8 +287,6 @@ public class RecommendListAdapter extends RecyclerView.Adapter
             }
         }
 
-
-
     }
 
     private static class LiveViewViewHolder extends SimpleViewHolder {
@@ -348,5 +323,6 @@ public class RecommendListAdapter extends RecyclerView.Adapter
             super(itemView);
         }
     }
+
 
 }

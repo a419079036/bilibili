@@ -3,6 +3,7 @@ package com.example.administrator.bilibili.client;
 import android.util.Log;
 
 import com.example.administrator.bilibili.model.RecommendItem;
+import com.google.gson.Gson;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.greenrobot.eventbus.EventBus;
@@ -27,6 +28,8 @@ public class ClientAPI
     private static AbstractHttpUtil sHttpUtil;
     private static final String APP_KEY = "1d8b6e7d45233436";
     private static final String App_SECRET = "FamGR6I1OwSutCZ2CelYQTJznz42c7sBbJcC0YxGXToV8j14uk1+3VvTFEbyBZeW";
+    private static final String PlAYURL_APP_KEY = "4ebafd7c4951b366";
+    private static final String PlAYURL_APP_SECRET = "8cb98205e9b2ad3669aad0fce12a4c13";
 
 
     static
@@ -34,6 +37,20 @@ public class ClientAPI
         // TODO: 创建特定的网络类库的支持
         sHttpUtil = new OkHttpUtilIml();
     }
+
+    public static void getPlayUrlAsync(String cid, int quality, String videoType)
+    {
+        String url = "http://interface.bilibili.com/playurl";
+        TreeMap<String, String> params = new TreeMap<>();
+        params.put("cid", cid);
+        params.put("quality", String.valueOf(quality));
+        params.put("otype", "json");
+        params.put("type", videoType);
+        params.put("appkey", PlAYURL_APP_KEY);
+
+
+    }
+
 
     private ClientAPI()
     {
@@ -52,6 +69,7 @@ public class ClientAPI
 
     public static void getRecommendListAsync()
     {
+        Log.e("自定义标签", "类名==ClientAPI" + "方法名==getRecommendListAsync=====:" + "");
         String url = "http://app.bilibili.com/x/show/old?appkey=1d8b6e7d45233436";
         sHttpUtil.doGetDataAsync(url, new HttpCallback()
         {
@@ -76,7 +94,7 @@ public class ClientAPI
                         //解析数据
                         int code1 = json.getInt("code");
                         //code1是json中带的返回码,0为正常返回
-                        if (code1 != 0)
+                        if (code1 == 0)
                         {
                             JSONArray array = json.getJSONArray("result");
                             int len = array.length();
@@ -90,6 +108,7 @@ public class ClientAPI
                             }
                             //TODO:发送给上层
                             //用eventbus发送数据
+                            Log.e("自定义标签", "类名==ClientAPI" + "方法名==onSuccess=====:" + "");
                             EventBus.getDefault().post(items);
 
 
@@ -133,6 +152,12 @@ public class ClientAPI
                         Log.d("VD", "url = : " + url);
                         String str = new String(data, "UTF-8");
                         JSONObject jsonObject = new JSONObject(str);
+                        code = jsonObject.getInt("code");
+                        if (code == 0)
+                        {
+                            JSONObject jsonData = jsonObject.getJSONObject("data");
+                            Gson gson = new Gson();
+                        }
                         // json.toString(4); 带缩进打印
                         Log.d("VD", "result = : " + jsonObject.toString());
 //                        System.out.println(jsonObject.toString());
@@ -149,6 +174,7 @@ public class ClientAPI
 
     private static String appendParamsWithSign(String url, TreeMap<String, String> params)
     {
+        Log.e("自定义标签", "类名==ClientAPI" + "方法名==appendParamsWithSign=====:" + "");
         String ret = url;
         if (url != null && params != null)
         {
@@ -190,6 +216,14 @@ public class ClientAPI
         return ret;
     }
 
+    private static String appendParamsWithSign(String url, TreeMap<String, String> params, String appKey, String appSecrt)
+    {
+
+        return null;
+
+    }
+
+
     /**
      * 计算sgin数值,进行数字签名
      *
@@ -199,6 +233,7 @@ public class ClientAPI
      */
     private static String sign(TreeMap<String, String> params, String appSecret)
     {
+        Log.e("自定义标签", "类名==ClientAPI" + "方法名==sign=====:" + "");
         String ret = null;
         if (params != null && appSecret != null)
         {

@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -59,6 +60,7 @@ public class RecommendFragment extends BaseFragment implements IRecommentView, S
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEvent(List<RecommendItem> items)
     {
+        Log.e("自定义标签", "类名==RecommendFragment" + "方法名==onEvent=====:" + "");
         if (items != null)
         {
             Toast.makeText(getContext(), "收到推荐", Toast.LENGTH_LONG).show();

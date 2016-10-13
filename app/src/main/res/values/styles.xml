@@ -9,6 +9,14 @@
         <item name="android:textColorPrimary">#fff</item>
     </style>
 
+    <style name="RecommendItemCard">
+        <!--所有的第三方属性, 或这 app: 开头的属性, 不要包含 app: 前缀-->
+        <item name="layout_columnWeight">1</item>
+        <item name="cardUseCompatPadding">true</item>
+        <item name="cardCornerRadius">3dp</item>
+        <item name="cardElevation">2dp</item>
+    </style>
+
     <!--首页推荐,列表条目 cradView样式-->
     <style name="Recommend_Item_Card">
         <!--app:layout_columnWeight="1"-->
@@ -23,8 +31,18 @@
 
     </style>
 
-    <style name="Recommend_Item_body_Titlt">
-
-
+    <style name="RecommendItemBodyIcon">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:src">@mipmap/ic_launcher</item>
+        <item name="android:layout_width">wrap_content</item>
     </style>
+
+    <style name="RecommendItemBodyTxt">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
 </resources>

@@ -1,5 +1,7 @@
 package com.example.administrator.bilibili.client;
 
+import android.util.Log;
+
 import java.io.IOException;
 
 import okhttp3.Call;
@@ -98,12 +100,13 @@ public class OkHttpUtilIml extends AbstractHttpUtil
                         @Override
                         public void onResponse(Call call, Response response) throws IOException
                         {
+                            Log.e("自定义标签", "类名==OkHttpUtilIml" + "方法名==onResponse=====:" + "");
                             int code = response.code();
                             if (code==HTTP_OK)
                             {
                                 byte[] data=response.body().bytes();
                                 //得到数据
-                                HttpUrl url1 = call.request().url();
+                                HttpUrl ur1 = call.request().url();
                                 //得到网址
                                 if (httpCallback!=null)
                                 {

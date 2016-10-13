@@ -1,7 +1,6 @@
 package com.example.administrator.bilibili.model;
 
 import com.google.gson.Gson;
-import com.google.gson.annotations.SerializedName;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -16,7 +15,6 @@ import java.util.List;
 
 public class RecommendItem implements IRecommentItemModel
 {
-    @SerializedName("type")
     private String type;
     private String headParam;
     private String headGoto;
@@ -62,7 +60,7 @@ public class RecommendItem implements IRecommentItemModel
 
 
         }
-        return null;
+        return ret;
 
     }
 
