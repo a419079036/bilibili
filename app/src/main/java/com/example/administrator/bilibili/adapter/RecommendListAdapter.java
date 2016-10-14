@@ -92,17 +92,20 @@ public class RecommendListAdapter extends RecyclerView.Adapter
         switch (viewType)
         {
             case TYPE_RECOMMEND:
-                // TODO: 推荐布局
+                //  推荐布局
                 itemView = inflater.inflate(R.layout.item_recommend_recommend, parent, false);
                 ret = new RecommendViewViewHolder(itemView);
                 break;
             case TYPE_LIVE:
-                // TODO: 直播布局
+                //  直播布局
                 itemView = inflater.inflate(R.layout.item_recommend_live, parent, false);
                 ret = new LiveViewViewHolder(itemView);
                 break;
             case TYPE_BANGUMI:
-                // TODO:番剧布局
+                // 番剧布局
+                itemView = inflater.inflate(R.layout.item_recommend_bangumi, parent, false);
+                ret = new Bangumi2ViewViewHolder(itemView);
+                break;
             case TYPE_REGION:
                 // TODO:
             case TYPE_WEB_LINK:
@@ -422,13 +425,104 @@ public class RecommendListAdapter extends RecyclerView.Adapter
         }
     }
 
-    private static class Bangumi2ViewViewHolder extends SimpleViewHolder
+    private static class Bangumi2ViewViewHolder extends SimpleViewHolder implements View.OnClickListener
     {
 
         public Bangumi2ViewViewHolder(View itemView)
         {
             super(itemView);
+            for (int i = 0; i < 4; i++)
+            {
+                View view = getChildView("item_commend_card_bangumi_view_" + i);
+                if (view != null)
+                {
+                    // 每一个Body内部视频点击事件
+                    view.setOnClickListener(this);
+                }
+            }
         }
+
+        @Override
+        public void onClick(View v)
+        {
+            //TODO:跳转操作
+
+        }
+
+        @Override
+        void bindView(RecommendItem recommendItem)
+        {
+            TextView txtTitle = ((TextView) getChildView(R.id.item_recommend_bangumi_head_title));
+            if (txtTitle != null)
+            {
+                txtTitle.setText(recommendItem.getHeadTitle());
+            }
+
+            //---------------------------
+            // 条目 , 默认四个
+            List<RecommendBodyItem> body = recommendItem.getBody();
+            if (body.size() >= 4)
+            {
+                // 使用反射动态获取多个控件ID
+                for (int i = 0; i < body.size(); i++)
+                {
+                    View view = getChildView("item_commend_card_bangumi_view_" + i);
+                    ImageView imageView = (ImageView) getChildView("item_commend_bangumi_body_icon_" + i);
+                    RecommendBodyItem bodyItem = body.get(i);
+                    view.setTag(bodyItem);
+                    String cover = bodyItem.getCover();
+                    if (cover != null)
+                    {
+                        // TODO: 显示图片
+                        Context context = imageView.getContext();
+                        Picasso.with(context)
+                                .load(cover)
+                                .config(Bitmap.Config.RGB_565)
+//                                .noFade() // 滑动的效果
+                                .resize(520, 350)
+                                .into(imageView);
+                    }
+
+
+                    TextView txtBodyTitle = (TextView) getChildView("item_commend_bangumi_body_title_" + i);
+                    //设置标题
+                    if (txtBodyTitle != null)
+                    {
+                        String title = bodyItem.getTitle();
+                        if (title != null)
+                        {
+                            txtBodyTitle.setText(title);
+                        }
+                    }
+
+                    TextView txtBodyStatus = (TextView) getChildView("item_commend_bangumi_body_status_0" + i);
+                    if (txtBodyStatus != null)
+                    {
+                        int status = bodyItem.getStatus();
+                        if (status >0)
+                        {
+                            txtBodyStatus.setText(status);
+                        }
+                    }
+
+                    TextView txtBodyTime = (TextView) getChildView("item_commend_bangumi_body_time_" + i);
+                    if (txtBodyTime != null)
+                    {
+                        //TODO:时间算法不明
+                        String time = "凌晨";
+                        if (time != null)
+                        {
+                            txtBodyTime.setText(time);
+                        }
+                    }
+                }
+            } else
+            {
+                // TODO: 代码动态添加布局
+
+            }
+        }
+
     }
 
     private static class RegionViewViewHolder extends SimpleViewHolder
