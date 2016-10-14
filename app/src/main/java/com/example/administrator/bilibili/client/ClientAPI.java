@@ -2,6 +2,7 @@ package com.example.administrator.bilibili.client;
 
 import android.util.Log;
 
+import com.example.administrator.bilibili.model.PlayUrl;
 import com.example.administrator.bilibili.model.RecommendItem;
 import com.google.gson.Gson;
 
@@ -46,7 +47,33 @@ public class ClientAPI
         params.put("quality", String.valueOf(quality));
         params.put("otype", "json");
         params.put("type", videoType);
-        params.put("appkey", PlAYURL_APP_KEY);
+
+        url = appendParamsWithSign(url, params, PlAYURL_APP_KEY, App_SECRET);
+
+        sHttpUtil.doGetDataAsync(url, new HttpCallback()
+        {
+            @Override
+            public void onSuccess(String url, int code, byte[] data)
+            {
+                if (code == 200)
+                {
+                    try
+                    {
+                        String str = new String(data, "UTF-8");
+                        Gson gson = new Gson();
+                        PlayUrl playUrl = gson.fromJson(str, PlayUrl.class);
+                        EventBus.getDefault().post(playUrl);
+
+                    }
+                    catch (UnsupportedEncodingException e)
+                    {
+                        e.printStackTrace();
+                    }
+
+
+                }
+            }
+        });
 
 
     }
@@ -131,7 +158,7 @@ public class ClientAPI
 
     }
 
-    public void getVideoDetail(String aid)
+    public  static  void getVideoDetail(String aid)
     {
         String url = "https://app.bilibili.com/x/view";
         //TODO:进行参数数字签名,访问网络,获取数据
@@ -219,9 +246,53 @@ public class ClientAPI
     private static String appendParamsWithSign(String url, TreeMap<String, String> params, String appKey, String appSecrt)
     {
 
-        return null;
+        String ret = url;
+        if (url != null && params != null && appSecrt != null && appKey != null)
+        {
+            params.put("appkey", appKey);
+            params.put("build", "420000");
+            params.put("channel", "bili");
+            params.put("mobi_app", "android");
+            params.put("platform", "android");
+            // TODO: 需要机型适配
+            params.put("screen", "xxhdpi");
+            params.put("ts", Long.toString(System.currentTimeMillis()));
+
+            String sign = sign(params, appSecrt);
+            StringBuilder sb = new StringBuilder(url);
+            sb.append('?');
+            Set<String> keySet = params.keySet();
+
+            for (String key : keySet)
+            {
+                try
+                {
+                    sb.append(key).append('=').
+                            append(URLEncoder.encode(params.get(key),"UTF-8"))
+                            .append('&');
+
+
+                }
+                catch (UnsupportedEncodingException e)
+                {
+                    e.printStackTrace();
+                }
+            }
+            if (sb.length()>0)
+            {
+                sb.append("sign").append(sign);
+
+            }
+            ret=sb.toString();
+
+
+        }
+        return ret;
+
 
     }
+
+
 
 
     /**
@@ -267,4 +338,6 @@ public class ClientAPI
         }
         return ret;
     }
+
+
 }

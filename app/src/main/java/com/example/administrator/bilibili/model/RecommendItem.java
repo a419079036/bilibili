@@ -31,7 +31,7 @@ public class RecommendItem implements IRecommentItemModel
         {
             ret = new RecommendItem();
             //  ret.type=js.
-            ret.type = json.getString("type");
+            ret.type = json.optString("type");
             JSONObject head = json.getJSONObject("head");
             ret.headParam = head.getString("param");
             ret.headGoto = head.getString("goto");

@@ -2,6 +2,7 @@ package com.example.administrator.bilibili.fragment;
 
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -12,15 +13,20 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.administrator.bilibili.R;
+import com.example.administrator.bilibili.activity.RecommendWebViewActivity;
 import com.example.administrator.bilibili.activity.VideoDeatilActivity;
 import com.example.administrator.bilibili.adapter.RecommendListAdapter;
 import com.example.administrator.bilibili.client.ClientAPI;
 import com.example.administrator.bilibili.model.RecommendBodyItem;
 import com.example.administrator.bilibili.model.RecommendItem;
 import com.example.administrator.bilibili.presenters.RecommendPresenter;
+import com.jude.rollviewpager.RollPagerView;
+import com.jude.rollviewpager.adapter.StaticPagerAdapter;
+import com.jude.rollviewpager.hintview.ColorPointHintView;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -33,8 +39,9 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class RecommendFragment extends BaseFragment implements IRecommentView, SwipeRefreshLayout.OnRefreshListener
+public class RecommendFragment extends BaseFragment implements IRecommentView, SwipeRefreshLayout.OnRefreshListener, View.OnClickListener
 {
+    private RollPagerView mRollViewPager;
     RecommendPresenter mRecommendPresenter;
     private List<RecommendItem> mItems;
     private RecommendListAdapter mAdapter;
@@ -45,7 +52,7 @@ public class RecommendFragment extends BaseFragment implements IRecommentView, S
     public void onCreate(@Nullable Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        mItems=new ArrayList<>();
+        mItems = new ArrayList<>();
         mAdapter = new RecommendListAdapter(getContext(), mItems);
         //注册Eventbus 事件订阅者
         EventBus.getDefault().register(this);
@@ -100,6 +107,26 @@ public class RecommendFragment extends BaseFragment implements IRecommentView, S
 
         View ret = inflater.inflate(R.layout.fragment_recommend, container, false);
         RecyclerView recyclerView = (RecyclerView) ret.findViewById(R.id.recommend_list);
+        mRollViewPager = (RollPagerView) ret.findViewById(R.id.roll_view_pager);
+        //设置播放时间间隔
+        mRollViewPager.setPlayDelay(2000);
+        //设置透明度
+        mRollViewPager.setAnimationDurtion(500);
+        //设置适配器
+        mRollViewPager.setAdapter(new TestNormalAdapter());
+
+        mRollViewPager.setOnClickListener(this);
+
+        //设置指示器（顺序依次）
+        //自定义指示器图片
+        //设置圆点指示器颜色
+        //设置文字指示器
+        //隐藏指示器
+        //mRollViewPager.setHintView(new IconHintView(this, R.drawable.point_focus, R.drawable.point_normal));
+        mRollViewPager.setHintView(new ColorPointHintView(getContext(), Color.YELLOW, Color.WHITE));
+        //mRollViewPager.setHintView(new TextHintView(this));
+        //mRollViewPager.setHintView(null);
+
 
         if (recyclerView != null)
         {
@@ -169,5 +196,78 @@ public class RecommendFragment extends BaseFragment implements IRecommentView, S
     public void onRefresh()
     {
         ClientAPI.getRecommendListAsync();
+    }
+
+    @Override
+    public void onClick(View v)
+    {
+        switch (v.getId())
+        {
+            case R.id.roll_view_pager:
+                Toast.makeText(getContext(), "点击了图片", Toast.LENGTH_LONG).show();
+                break;
+        }
+
+    }
+
+    private class TestNormalAdapter extends StaticPagerAdapter
+    {
+        private int[] imgs = {
+                R.drawable.topweb1,
+                R.drawable.topweb2,
+                R.drawable.topweb3,
+        };
+
+
+        @Override
+        public View getView(ViewGroup container, final int position)
+        {
+            ImageView view = new ImageView(container.getContext());
+            view.setImageResource(imgs[position]);
+            view.setScaleType(ImageView.ScaleType.CENTER_CROP);
+            view.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+            view.setOnClickListener(new View.OnClickListener()      // 点击事件
+            {
+                @Override
+                public void onClick(View v)
+                {
+                    String webUrl = "http://www.bilibili.com/blackboard/activity-cm03.html";
+                    switch (position)
+                    {
+                        case 0:
+                            Log.e("自定义标签", "类名==TestNormalAdapter" + "方法名==onClick=====:" + "点击0");
+                            break;
+                        case 1:
+                            Log.e("自定义标签", "类名==TestNormalAdapter" + "方法名==onClick=====:" + "点击1");
+                            break;
+                        case 2:
+                            Log.e("自定义标签", "类名==TestNormalAdapter" + "方法名==onClick=====:" + "点击2");
+                            webUrl="http://bangumi.bilibili.com/anime/5550";
+
+
+                            break;
+
+                    }
+
+                    Intent intentWeb=new Intent(getActivity(),RecommendWebViewActivity.class);
+                    intentWeb.putExtra("url",webUrl);
+                    startActivity(intentWeb);
+
+
+
+                }
+
+            });
+
+
+            return view;
+        }
+
+
+        @Override
+        public int getCount()
+        {
+            return imgs.length;
+        }
     }
 }

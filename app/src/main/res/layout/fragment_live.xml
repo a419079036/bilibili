@@ -5,9 +5,10 @@
              tools:context="com.example.administrator.bilibili.fragment.LiveFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <SurfaceView
+        android:id="@+id/live_surface_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment"/>
+        />
 
 </FrameLayout>
