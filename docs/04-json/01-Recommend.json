@@ -1,0 +1,935 @@
+{
+  "code": 0,
+  "result": [
+    {
+      "type": "recommend",
+      "head": {
+        "param": "",
+        "goto": "",
+        "style": "gm_av",
+        "title": "热门焦点"
+      },
+      "body": [
+        {
+          "title": "【勇者大冒险 MMD】The monster 荼岩",
+          "style": "gm_av",
+          "cover": "http://i0.hdslb.com/bfs/archive/2146cf8472c1eb12c1cede8b26bd607c5a3b3164.jpg_320x200.jpg",
+          "param": "6594870",
+          "goto": "av",
+          "width": 580,
+          "height": 364,
+          "play": "9815",
+          "danmaku": "284"
+        },
+        {
+          "title": "158妹子秋季穿搭 森女/日系/学院/ol",
+          "style": "gm_av",
+          "cover": "http://i0.hdslb.com/bfs/archive/f4430839ad27263b97ea4f74c95a5d5559962614.jpg_320x200.jpg",
+          "param": "6583508",
+          "goto": "av",
+          "width": 580,
+          "height": 364,
+          "play": "1.7万",
+          "danmaku": "268"
+        },
+        {
+          "title": "【美食纪录片】味道  2016国庆特别奉献【全12集/720P】",
+          "style": "gm_av",
+          "cover": "http://i0.hdslb.com/bfs/archive/6936d20e89e1d12eaeeadc202a3c941cc8c1e583.jpg_320x200.jpg",
+          "param": "6590483",
+          "goto": "av",
+          "width": 580,
+          "height": 364,
+          "play": "7544",
+          "danmaku": "189"
+        },
+        {
+          "title": "【新番槽点】十月是魔法少女的胜利！？新番吐槽第一轮",
+          "style": "gm_av",
+          "cover": "http://i0.hdslb.com/bfs/archive/b5fdc1b141640e8c3ecfbd726b30b3ba0ecb6244.jpg_320x200.jpg",
+          "param": "6583743",
+          "goto": "av",
+          "width": 580,
+          "height": 364,
+          "play": "12.6万",
+          "danmaku": "1149"
+        }
+      ]
+    },
+    {
+      "type": "live",
+      "head": {
+        "param": "",
+        "goto": "live",
+        "style": "gm_av",
+        "title": "热门直播",
+        "count": 1245
+      },
+      "body": [
+        {
+          "title": "超凡大师教你-青铜-黄金该如何上分",
+          "style": "gm_live",
+          "cover": "http://i0.hdslb.com/group1/M00/3A/EB/oYYBAFbPy42AEieeAABle0wqzoc644.jpg",
+          "param": "66511",
+          "goto": "live",
+          "width": 580,
+          "height": 364,
+          "up_face": "http://i1.hdslb.com/bfs/face/ba45d8ec27ae9806796097dd23760bce23602c15.jpg",
+          "up": "雪碧呀",
+          "online": 2406,
+          "area": "电子竞技",
+          "area_id": 4
+        },
+        {
+          "title": "【美服守望先锋】打源氏就是不能怂！",
+          "style": "gm_live",
+          "cover": "http://i0.hdslb.com/bfs/live/55790c6d30300516427d621577865f0e9a36bdb5.jpg",
+          "param": "75609",
+          "goto": "live",
+          "width": 580,
+          "height": 364,
+          "up_face": "http://i0.hdslb.com/bfs/face/825a218be87f0b33e29d1958322228f2c9fd43f7.jpg",
+          "up": "EatMyJJplz",
+          "online": 1568,
+          "area": "网络游戏",
+          "area_id": 3
+        },
+        {
+          "title": "(๑•̀ㅂ•́)و✧总决赛第八日赛程",
+          "style": "gm_live",
+          "cover": "http://i0.hdslb.com/bfs/live/a0b3b4976d5cef9a91a632222eb9df24118bb00b.jpg",
+          "param": "5279",
+          "goto": "live",
+          "width": 580,
+          "height": 364,
+          "up_face": "http://i1.hdslb.com/bfs/face/2c0799d5e65a56668944d3807405663620b720a3.jpg",
+          "up": "宫本·狗雨",
+          "online": 18733,
+          "area": "电子竞技",
+          "area_id": 4
+        },
+        {
+          "title": "【洛神赋  天依】",
+          "style": "gm_live",
+          "cover": "http://i0.hdslb.com/bfs/live/a72bfad6d94149a39cee5de3349ef982a77ec1c0.jpg",
+          "param": "61132",
+          "goto": "live",
+          "width": 580,
+          "height": 364,
+          "up_face": "http://i0.hdslb.com/bfs/face/93554bc1d486211715add1e65075c4bfcd75b848.jpg",
+          "up": "我真的是离城",
+          "online": 506,
+          "area": "绘画专区",
+          "area_id": 9
+        }
+      ]
+    },
+    {
+      "type": "bangumi_2",
+      "head": {
+        "param": "13",
+        "goto": "subarea",
+        "style": "gs_bangumi",
+        "title": "番剧推荐"
+      },
+      "body": [
+        {
+          "title": "青鬼",
+          "style": "gs_bangumi",
+          "cover": "http://i2.hdslb.com/bfs/archive/eb05639bf3310f46c59f2ece7f215685ae65e0ac.jpg",
+          "param": "5538",
+          "goto": "bangumi_list",
+          "width": 320,
+          "height": 422,
+          "desc1": "更新到第2话",
+          "status": 2
+        },
+        {
+          "title": "齐木楠雄的灾难",
+          "style": "gs_bangumi",
+          "cover": "http://i0.hdslb.com/bfs/archive/7d66efa000c88207efbfcb9268c2446ac68f3c7a.jpg",
+          "param": "5069",
+          "goto": "bangumi_list",
+          "width": 320,
+          "height": 422,
+          "desc1": "更新到第14话",
+          "status": 2
+        },
+        {
+          "title": "SHOW BY ROCK!! 第二季",
+          "style": "gs_bangumi",
+          "cover": "http://i0.hdslb.com/bfs/archive/6c63d4c4a26551942f54815259cabef6fa4ef582.jpg",
+          "param": "5520",
+          "goto": "bangumi_list",
+          "width": 320,
+          "height": 422,
+          "desc1": "更新到第2话",
+          "status": 2
+        },
+        {
+          "title": "刀剑乱舞-花丸-",
+          "style": "gs_bangumi",
+          "cover": "http://i0.hdslb.com/bfs/archive/a641693a33864c7b1e8ff363759a67e7cd5c2576.jpg",
+          "param": "5515",
+          "goto": "bangumi_list",
+          "width": 320,
+          "height": 422,
+          "desc1": "更新到第2话",
+          "status": 2
+        }
+      ]
+    },
+    {
+      "type": "region",
+      "head": {
+        "param": "1",
+        "goto": "subarea",
+        "style": "gm_av",
+        "title": "动画区"
+      },
+      "body": [
+        {
+          "title": "【你说何必呢】PPAP版 僵尸步亚洲舞王",
+          "style": "gm_av",
+          "cover": "http://i2.hdslb.com/bfs/archive/b6a05cde11a96295cb863f3b9d1aea342eb17c57.jpg_320x200.jpg",
+          "param": "6586410",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "1.7万",
+          "danmaku": "115"
+        },
+        {
+          "title": "海贼王专题：神龙之呼风唤雨(上集)",
+          "style": "gm_av",
+          "cover": "http://i0.hdslb.com/bfs/archive/0e177174ec00f3daa4bce1ccd79c012215e24c8a.jpg_320x200.jpg",
+          "param": "6612115",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "7954",
+          "danmaku": "187"
+        },
+        {
+          "title": "【剑网三MMD】你愿意当这六只正太的Super Girl吗？",
+          "style": "gm_av",
+          "cover": "http://i1.hdslb.com/bfs/archive/107a973aeba9b6989ac306f68c3edb84ad8c8a02.jpg_320x200.jpg",
+          "param": "6589891",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "6477",
+          "danmaku": "251"
+        },
+        {
+          "title": "【国动扯谈】扯一扯《一人之下》吧~（算了，我承认自己声音受了）",
+          "style": "gm_av",
+          "cover": "http://i2.hdslb.com/bfs/archive/47761f6339e5fd5d6e690aeaef3a859629f2ba7d.jpg_320x200.jpg",
+          "param": "6598035",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "1.3万",
+          "danmaku": "239"
+        }
+      ]
+    },
+    {
+      "type": "region",
+      "head": {
+        "param": "3",
+        "goto": "subarea",
+        "style": "gm_av",
+        "title": "音乐区"
+      },
+      "body": [
+        {
+          "title": "【Skm破音】不将就",
+          "style": "gm_av",
+          "cover": "http://i2.hdslb.com/bfs/archive/3e1694924ee3d0a244ff08cf88a23ed4685644e9.jpg_320x200.jpg",
+          "param": "6585953",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "3.3万",
+          "danmaku": "1213"
+        },
+        {
+          "title": "【帝听ｘ昼夜】微微一笑很倾城＆一笑倾城",
+          "style": "gm_av",
+          "cover": "http://i1.hdslb.com/bfs/archive/f48d52dee8c00687bf335bf342e2e2c06c74ce4e.png_320x200.png",
+          "param": "6586100",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "3.2万",
+          "danmaku": "1023"
+        },
+        {
+          "title": "【小可儿】卧槽不可能",
+          "style": "gm_av",
+          "cover": "http://i1.hdslb.com/bfs/archive/49605ea77996f9439f66e1629b2f7f3a1a154fb4.jpg_320x200.jpg",
+          "param": "6583784",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "5.0万",
+          "danmaku": "745"
+        },
+        {
+          "title": "【Vmoe字幕组】fripSide concert tour 2015 ~infinite synchronicity~",
+          "style": "gm_av",
+          "cover": "http://i1.hdslb.com/bfs/archive/d84163619990405297908a241ca74b294c501c9a.jpg_320x200.jpg",
+          "param": "6591345",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "1.3万",
+          "danmaku": "1958"
+        }
+      ]
+    },
+    {
+      "type": "region",
+      "head": {
+        "param": "129",
+        "goto": "subarea",
+        "style": "gm_av",
+        "title": "舞蹈区"
+      },
+      "body": [
+        {
+          "title": "【兄松】极乐净土【着物松】",
+          "style": "gm_av",
+          "cover": "http://i1.hdslb.com/bfs/archive/f10b1ce7bed914f8078e1418f10cf8676ab8503d.jpg_320x200.jpg",
+          "param": "6577431",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "3264",
+          "danmaku": "90"
+        },
+        {
+          "title": "【Cheri ♥ Cherry】 Cherry  Hunt  【伪·妖艳贱货与大帅比】",
+          "style": "gm_av",
+          "cover": "http://i1.hdslb.com/bfs/archive/af06a32c664bcfcaff336b46a94edca50208b0eb.jpg_320x200.jpg",
+          "param": "6603811",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "2074",
+          "danmaku": "308"
+        },
+        {
+          "title": "【Christina喵】MASAYUME CHASING生日作！",
+          "style": "gm_av",
+          "cover": "http://i2.hdslb.com/bfs/archive/6105b50bad58c5140f47c92f53b4ddc7a39cf172.jpg_320x200.jpg",
+          "param": "6607519",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "2163",
+          "danmaku": "29"
+        },
+        {
+          "title": "【天才少女pororo】【love me if you can】叮！撩妹狂魔上线,P2睡衣版ppap",
+          "style": "gm_av",
+          "cover": "http://i2.hdslb.com/bfs/archive/9eccdf3f6797189764837adedac47d66e6d1144f.jpg_320x200.jpg",
+          "param": "6593936",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "2356",
+          "danmaku": "605"
+        }
+      ]
+    },
+    {
+      "type": "region",
+      "head": {
+        "param": "4",
+        "goto": "subarea",
+        "style": "gm_av",
+        "title": "游戏区"
+      },
+      "body": [
+        {
+          "title": "2016英雄联盟S6世界总决赛 小组赛第六日",
+          "style": "gm_av",
+          "cover": "http://i2.hdslb.com/bfs/archive/47de0733ddbe1c91233e71d498665d062eb25bf8.jpg_320x200.jpg",
+          "param": "6595936",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "5.2万",
+          "danmaku": "3077"
+        },
+        {
+          "title": "实况：100难度末日人机 挑战成功",
+          "style": "gm_av",
+          "cover": "http://i2.hdslb.com/bfs/archive/d86841c42856b2513e21c6c0fd1bb07d8684902f.jpg_320x200.jpg",
+          "param": "6590206",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "2.6万",
+          "danmaku": "466"
+        },
+        {
+          "title": "笑笑西卡德云色 16.10.7 鸡蛋变身猕猴桃",
+          "style": "gm_av",
+          "cover": "http://i1.hdslb.com/bfs/archive/b68c48bf691ba9ece19f1d275aaeead630044df1.jpg_320x200.jpg",
+          "param": "6590872",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "4.7万",
+          "danmaku": "1747"
+        },
+        {
+          "title": "努巴尼欢乐秀37：别看其他英雄了，选我选我！",
+          "style": "gm_av",
+          "cover": "http://i0.hdslb.com/bfs/archive/3aaa9f338c64e1fab19c541c94357b42ee07372c.jpg_320x200.jpg",
+          "param": "6594039",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "16.2万",
+          "danmaku": "783"
+        }
+      ]
+    },
+    {
+      "type": "weblink",
+      "head": {
+        "param": "",
+        "goto": "",
+        "style": "",
+        "title": ""
+      },
+      "body": [
+        {
+          "title": "",
+          "style": "gl_normal",
+          "cover": "http://i0.hdslb.com/bfs/archive/016bb7c9ee6063eae2ad9cbe24aebce706be33d6.jpg",
+          "param": "http://www.bilibili.com/topic/v2/phone1521.html",
+          "goto": "weblink",
+          "width": 714,
+          "height": 211
+        }
+      ]
+    },
+    {
+      "type": "region",
+      "head": {
+        "param": "119",
+        "goto": "subarea",
+        "style": "gm_av",
+        "title": "鬼畜区"
+      },
+      "body": [
+        {
+          "title": "【PPAP】这个卫生巾有毒！！（洗脑向）",
+          "style": "gm_av",
+          "cover": "http://i1.hdslb.com/bfs/archive/d089704055a43b5f7c232c34ae7b1a5dd921caa4.jpg_320x200.jpg",
+          "param": "6609947",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "6702",
+          "danmaku": "201"
+        },
+        {
+          "title": "ppap源氏版   坷垃级制作",
+          "style": "gm_av",
+          "cover": "http://i2.hdslb.com/bfs/archive/2aa4e416ce9eaa1efe756db8b29138e727f2de32.jpg_320x200.jpg",
+          "param": "6601550",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "6861",
+          "danmaku": "39"
+        },
+        {
+          "title": "物理鬼畜课堂",
+          "style": "gm_av",
+          "cover": "http://i0.hdslb.com/bfs/archive/ad5bf94f6e61e26c8dffafa7d30748ab912503d2.jpg_320x200.jpg",
+          "param": "6594759",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "8941",
+          "danmaku": "161"
+        },
+        {
+          "title": "【PPAP】AIPC",
+          "style": "gm_av",
+          "cover": "http://i2.hdslb.com/bfs/archive/daa4f5a9d956f28107a38bb5e1168ac55d031a03.jpg_320x200.jpg",
+          "param": "6586741",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "3.5万",
+          "danmaku": "145"
+        }
+      ]
+    },
+    {
+      "type": "region",
+      "head": {
+        "param": "36",
+        "goto": "subarea",
+        "style": "gm_av",
+        "title": "科技区"
+      },
+      "body": [
+        {
+          "title": "【熊叔试吃会】杨桃是什么味道的？ @conandiy",
+          "style": "gm_av",
+          "cover": "http://i1.hdslb.com/bfs/archive/08f021daf5450247516471022ac65e68d4add7c6.jpg_320x200.jpg",
+          "param": "6579344",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "3.5万",
+          "danmaku": "636"
+        },
+        {
+          "title": "「科技三分钟」锤子T3真机照亮相工信部 扎克伯格亲自展示VR社交应用 161008",
+          "style": "gm_av",
+          "cover": "http://i2.hdslb.com/bfs/archive/7de4113e874bf05722f7f16da02fd1ab831bfa84.jpg_320x200.jpg",
+          "param": "6601989",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "8443",
+          "danmaku": "124"
+        },
+        {
+          "title": "食彩之国 第635回 明石章鱼【@FoodForFun】",
+          "style": "gm_av",
+          "cover": "http://i0.hdslb.com/bfs/archive/7170d3a876b373a0d7a476e7948aa19039bda538.jpg_320x200.jpg",
+          "param": "6587516",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "3.5万",
+          "danmaku": "1289"
+        },
+        {
+          "title": "【原始技术】掷矛器（Minecraft真人版第二十一弹）",
+          "style": "gm_av",
+          "cover": "http://i0.hdslb.com/bfs/archive/f4b77fca974e4da28c2aaf612a190bc90f051bee.jpg_320x200.jpg",
+          "param": "6593084",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "9.4万",
+          "danmaku": "928"
+        }
+      ]
+    },
+    {
+      "type": "activity",
+      "head": {
+        "param": "subarea",
+        "goto": "activity",
+        "style": "",
+        "title": "活动中心"
+      },
+      "body": [
+        {
+          "title": "翻唱V+，化身大P的人声本家！",
+          "style": "gl_act",
+          "cover": "http://i0.hdslb.com/bfs/archive/18465d7e7ce08d38030911fc53ad05cba459a844.jpg",
+          "param": "http://www.bilibili.com/html/activity-VocaloidCover-m.html",
+          "goto": "weblink",
+          "width": 714,
+          "height": 211
+        },
+        {
+          "title": "东京去了没去？(o´ω`o)",
+          "style": "gl_act",
+          "cover": "http://i0.hdslb.com/bfs/archive/ff29452cb59984a29a613ad8156b486f024d56c0.jpg",
+          "param": "http://www.bilibili.com/html/activity-TGS2016-m.html",
+          "goto": "weblink",
+          "width": 714,
+          "height": 211
+        },
+        {
+          "title": "元宵晚会征稿安利书！",
+          "style": "gl_act",
+          "cover": "http://i0.hdslb.com/bfs/archive/aa54c9e4a6cf9b76c42cee6eb0b6aea34130628a.jpg",
+          "param": "http://www.bilibili.com/topic/v2/phone1551.html",
+          "goto": "weblink",
+          "width": 714,
+          "height": 211
+        },
+        {
+          "title": "竟然可以攻略2233?! ━Σ(ﾟДﾟ|||)━",
+          "style": "gl_act",
+          "cover": "http://i0.hdslb.com/bfs/archive/882c27633c9bd30a400e424755f57ca5e858cd5a.jpg",
+          "param": "http://www.bilibili.com/html/activity-qixi2016.html",
+          "goto": "weblink",
+          "width": 714,
+          "height": 211
+        }
+      ]
+    },
+    {
+      "type": "region",
+      "head": {
+        "param": "160",
+        "goto": "subarea",
+        "style": "gm_av",
+        "title": "生活区"
+      },
+      "body": [
+        {
+          "title": "吃早饭~大油条＋萝卜饼＋豆浆＋皮蛋瘦肉粥＋面包",
+          "style": "gm_av",
+          "cover": "http://i0.hdslb.com/bfs/archive/45838e49c868eeb165d15983c731ae697cd81015.jpg_320x200.jpg",
+          "param": "6578083",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "6489",
+          "danmaku": "340"
+        },
+        {
+          "title": "瞅我头发绞的咋样",
+          "style": "gm_av",
+          "cover": "http://i2.hdslb.com/bfs/archive/a9c923f48866c2c57a16c75ae560018241819750.jpg_320x200.jpg",
+          "param": "6609704",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "2.1万",
+          "danmaku": "137"
+        },
+        {
+          "title": "中国大胃王密子君（自助餐系列）好久没吃啦，辛苦了饲养员，吃播吃货美食！",
+          "style": "gm_av",
+          "cover": "http://i2.hdslb.com/bfs/archive/1befd2502ca41b336db5c3b5d757f52b4b60f8d8.jpg_320x200.jpg",
+          "param": "6577812",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "19.4万",
+          "danmaku": "1693"
+        },
+        {
+          "title": "【蛋黄】PPAP 雷姆有个苹果雷姆有只笔",
+          "style": "gm_av",
+          "cover": "http://i1.hdslb.com/bfs/archive/a6ea00e9a71db5c495de36456d3ba7780eab3a58.jpg_320x200.jpg",
+          "param": "6581603",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "8667",
+          "danmaku": "545"
+        }
+      ]
+    },
+    {
+      "type": "weblink",
+      "head": {
+        "param": "",
+        "goto": "",
+        "style": "",
+        "title": ""
+      },
+      "body": [
+        {
+          "title": "",
+          "style": "gl_normal",
+          "cover": "http://i0.hdslb.com/bfs/archive/247c3cb229abb3da0a4b1c3f265ca68c875f67a0.jpg",
+          "param": "http://www.bilibili.com/topic/v2/phone1550.html",
+          "goto": "weblink",
+          "width": 714,
+          "height": 211
+        }
+      ]
+    },
+    {
+      "type": "region",
+      "head": {
+        "param": "155",
+        "goto": "subarea",
+        "style": "gm_av",
+        "title": "时尚区"
+      },
+      "body": [
+        {
+          "title": "{邋遢分享}名创优品的化妆品居然！ 美乐蒂HelloKitty合作款激萌",
+          "style": "gm_av",
+          "cover": "http://i1.hdslb.com/bfs/archive/7c1e54664997e6f1b7adb2d70f75a108c9eec483.jpg_320x200.jpg",
+          "param": "6586638",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "6695",
+          "danmaku": "164"
+        },
+        {
+          "title": "【64】九月爱用分享｜悦诗风吟｜Colourpop｜Rimmel｜诗佩妮｜砍妹 鞋子etc还有好吃的！",
+          "style": "gm_av",
+          "cover": "http://i1.hdslb.com/bfs/archive/a64339ea017621d1605bf6a4da73553b3a66e310.jpg_320x200.jpg",
+          "param": "6582966",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "7461",
+          "danmaku": "271"
+        },
+        {
+          "title": "【百万】超简单短发凌乱卷发教程",
+          "style": "gm_av",
+          "cover": "http://i2.hdslb.com/bfs/archive/3de9aa354bfdad3653f7bde47fddbab15b6eff29.jpg_320x200.jpg",
+          "param": "6590148",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "2490",
+          "danmaku": "35"
+        },
+        {
+          "title": "【宅小白】教你识别自己的体型和简单的穿衣搭配建议女生篇！！！~~全程干货~~~！",
+          "style": "gm_av",
+          "cover": "http://i1.hdslb.com/bfs/archive/b020de5a95ec3f02e5f5a76dd153f24eed6c00d4.jpg_320x200.jpg",
+          "param": "6615296",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "6188",
+          "danmaku": "139"
+        }
+      ]
+    },
+    {
+      "type": "region",
+      "head": {
+        "param": "5",
+        "goto": "subarea",
+        "style": "gm_av",
+        "title": "娱乐区"
+      },
+      "body": [
+        {
+          "title": "【月曜夜未央】【中字】20161003【月曜小分队】",
+          "style": "gm_av",
+          "cover": "http://i1.hdslb.com/bfs/archive/c1b8e62f20fdac603ec519838fcdc1d51c3a8528.jpg_320x200.jpg",
+          "param": "6590854",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "1.4万",
+          "danmaku": "1564"
+        },
+        {
+          "title": "非正式会谈第二季43期：来呀 互相伤害啊 对不起有用吗（20161007）",
+          "style": "gm_av",
+          "cover": "http://i2.hdslb.com/bfs/archive/e3465bbd1a32be6c7e91bb0e680392a0478ec70f.png_320x200.png",
+          "param": "6589685",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "2.1万",
+          "danmaku": "4975"
+        },
+        {
+          "title": "【张艺兴】What You Need 海外饭MV Reaction (持更)",
+          "style": "gm_av",
+          "cover": "http://i0.hdslb.com/bfs/archive/159836342aed172e470d3b0cd69eb1304007e9b8.jpg_320x200.jpg",
+          "param": "6590961",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "3753",
+          "danmaku": "149"
+        },
+        {
+          "title": "【饭局的诱惑】第3期：胡可吐槽老公不太行 最爱吴秀波",
+          "style": "gm_av",
+          "cover": "http://i1.hdslb.com/bfs/archive/7bd1f6926d0b8ecbdf9f8c1f6dacfa0609741e27.jpg",
+          "param": "6612257",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "2903",
+          "danmaku": "309"
+        }
+      ]
+    },
+    {
+      "type": "weblink",
+      "head": {
+        "param": "",
+        "goto": "",
+        "style": "",
+        "title": ""
+      },
+      "body": [
+        {
+          "title": "",
+          "style": "gl_pic",
+          "cover": "http://i0.hdslb.com/bfs/archive/a12c4e08e27d20efe513ad668ee8bfa9f8b1d12a.png",
+          "param": "http://bmall.bilibili.com",
+          "goto": "weblink",
+          "width": 714,
+          "height": 211
+        }
+      ]
+    },
+    {
+      "type": "region",
+      "head": {
+        "param": "11",
+        "goto": "subarea",
+        "style": "gm_av",
+        "title": "电视剧区"
+      },
+      "body": [
+        {
+          "title": "安樊-幻听（赠 叶颜）",
+          "style": "gm_av",
+          "cover": "http://i2.hdslb.com/bfs/archive/a3f75954894f2db20ae825961d53eeb4588ed3e3.jpg_320x200.jpg",
+          "param": "6588843",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "883",
+          "danmaku": "29"
+        },
+        {
+          "title": "【杨洋】【郑爽】《逆向圆环》·伪预告 （Boss和他的小傲娇？？）",
+          "style": "gm_av",
+          "cover": "http://i0.hdslb.com/bfs/archive/2b24c45e821162cc9e8d0d8f3ba3d0ab50a4f122.jpg_320x200.jpg",
+          "param": "6601282",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "2985",
+          "danmaku": "115"
+        },
+        {
+          "title": "【网络剧错生】【明望到此一游】首尔游特别篇（上）-明望聊聊天",
+          "style": "gm_av",
+          "cover": "http://i2.hdslb.com/bfs/archive/75ed15522884b86893d30927418a692ac9cbf0bb.jpg_320x200.jpg",
+          "param": "6602315",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "2.2万",
+          "danmaku": "2256"
+        },
+        {
+          "title": "【720p宽屏·明道】冰火两总裁，翩翩一少年【单均昊+赵冠希+杨家将混剪】（极致舔屏，慎入）",
+          "style": "gm_av",
+          "cover": "http://i1.hdslb.com/bfs/archive/66b81e7124d2f151d5799d4aab09f4e17e4325e7.jpg_320x200.jpg",
+          "param": "6581588",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "1901",
+          "danmaku": "931"
+        }
+      ]
+    },
+    {
+      "type": "region",
+      "head": {
+        "param": "23",
+        "goto": "subarea",
+        "style": "gm_av",
+        "title": "电影区"
+      },
+      "body": [
+        {
+          "title": "【电影派解说——《惊声尖笑》】三分钟带你看完这部节操尽失的恶搞大片",
+          "style": "gm_av",
+          "cover": "http://i2.hdslb.com/bfs/archive/3970a38cac30dc3cb9f51908376ba1da249ce46e.jpg_320x200.jpg",
+          "param": "6579197",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "4.8万",
+          "danmaku": "206"
+        },
+        {
+          "title": "【八月看大片】末世来袭人类沦为监下囚《猩球崛起2黎明之战》",
+          "style": "gm_av",
+          "cover": "http://i1.hdslb.com/bfs/archive/e26fff16c4d9f48b9a9d436985cd5298bb67001d.jpg_320x200.jpg",
+          "param": "6609018",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "2775",
+          "danmaku": "529"
+        },
+        {
+          "title": "奇葩丧尸大盘点及各年代的《我是传奇》",
+          "style": "gm_av",
+          "cover": "http://i1.hdslb.com/bfs/archive/9914bd9d3e0583b58d4c4e5bc42b22f541d9c720.jpg_320x200.jpg",
+          "param": "6615350",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "2743",
+          "danmaku": "74"
+        },
+        {
+          "title": "【悬疑结局】越胆小的人越伪装 越伪装越容易被戳穿",
+          "style": "gm_av",
+          "cover": "http://i2.hdslb.com/bfs/archive/8ba35ca2c5a85c66410201d3857df43458a88b53.jpg_320x200.jpg",
+          "param": "6594684",
+          "goto": "av",
+          "width": 350,
+          "height": 219,
+          "play": "1466",
+          "danmaku": "15"
+        }
+      ]
+    },
+    {
+      "type": "weblink",
+      "head": {
+        "param": "",
+        "goto": "",
+        "style": "",
+        "title": ""
+      },
+      "body": [
+        {
+          "title": "",
+          "style": "gl_normal",
+          "cover": "http://i0.hdslb.com/bfs/archive/9543f4a7373a24ed2484d4807cd7db144a6c3d10.jpg",
+          "param": " http://www.bilibili.com/html/activity-20161003movie.html",
+          "goto": "weblink",
+          "width": 714,
+          "height": 211
+        }
+      ]
+    },
+    {
+      "type": "weblink",
+      "head": {
+        "param": "",
+        "goto": "",
+        "style": "",
+        "title": ""
+      },
+      "body": [
+        {
+          "title": "",
+          "style": "gl_normal",
+          "cover": "http://i0.hdslb.com/bfs/archive/ebe803cd2eb1d48fa2cb8ac828e3ee909151de33.jpg",
+          "param": "http://www.bilibili.com/html/activity-20161003tv.html",
+          "goto": "weblink",
+          "width": 714,
+          "height": 211
+        }
+      ]
+    }
+  ]
+}

@@ -37,7 +37,8 @@ public class RecommendListAdapter extends RecyclerView.Adapter
     private Context mContext;
     private List<RecommendItem> mItems;
 
-    public RecommendListAdapter(Context context, List<RecommendItem> items) {
+    public RecommendListAdapter(Context context, List<RecommendItem> items)
+    {
         mContext = context;
         this.mItems = items;
     }
@@ -49,11 +50,13 @@ public class RecommendListAdapter extends RecyclerView.Adapter
      */
 
     @Override
-    public int getItemViewType(int position) {
+    public int getItemViewType(int position)
+    {
         int ret = 0;
         RecommendItem item = mItems.get(position);
         String type = item.getType();
-        switch (type) {
+        switch (type)
+        {
             case "recommend":
                 ret = 1;
                 break;
@@ -80,12 +83,14 @@ public class RecommendListAdapter extends RecyclerView.Adapter
     }
 
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType)
+    {
         RecyclerView.ViewHolder ret = null;
         LayoutInflater inflater = LayoutInflater.from(mContext);
         View itemView = null;
 
-        switch (viewType) {
+        switch (viewType)
+        {
             case TYPE_RECOMMEND:
                 // TODO: 推荐布局
                 itemView = inflater.inflate(R.layout.item_recommend_recommend, parent, false);
@@ -93,6 +98,9 @@ public class RecommendListAdapter extends RecyclerView.Adapter
                 break;
             case TYPE_LIVE:
                 // TODO: 直播布局
+                itemView = inflater.inflate(R.layout.item_recommend_live, parent, false);
+                ret = new LiveViewViewHolder(itemView);
+                break;
             case TYPE_BANGUMI:
                 // TODO:番剧布局
             case TYPE_REGION:
@@ -116,18 +124,22 @@ public class RecommendListAdapter extends RecyclerView.Adapter
      * @param position
      */
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position)
+    {
         RecommendItem recommendItem = mItems.get(position);
-        if (holder instanceof SimpleViewHolder) {
+        if (holder instanceof SimpleViewHolder)
+        {
             SimpleViewHolder simpleViewHolder = (SimpleViewHolder) holder;
             simpleViewHolder.bindView(recommendItem);
         }
     }
 
     @Override
-    public int getItemCount() {
+    public int getItemCount()
+    {
         int ret = 0;
-        if (mItems != null) {
+        if (mItems != null)
+        {
             ret = mItems.size();
         }
         return ret;
@@ -137,23 +149,28 @@ public class RecommendListAdapter extends RecyclerView.Adapter
     // ViewHolder
     ///////////////////////////////////////////////////////////////////////////
 
-    private static class SimpleViewHolder extends RecyclerView.ViewHolder {
+    private static class SimpleViewHolder extends RecyclerView.ViewHolder
+    {
         /**
          * 通用的View缓存功能
          */
         private SparseArrayCompat<View> mViews;
 
-        public SimpleViewHolder(View itemView) {
+        public SimpleViewHolder(View itemView)
+        {
             super(itemView);
             mViews = new SparseArrayCompat<>();
         }
 
-        View getChildView(int rid) {
+        View getChildView(int rid)
+        {
             View ret = null;
             ret = mViews.get(rid);
-            if (ret == null) {
+            if (ret == null)
+            {
                 ret = itemView.findViewById(rid);
-                if (ret != null) {
+                if (ret != null)
+                {
                     mViews.put(rid, ret);
                 }
             }
@@ -167,24 +184,32 @@ public class RecommendListAdapter extends RecyclerView.Adapter
          * @param name
          * @return
          */
-        View getChildView(String name) {
+        View getChildView(String name)
+        {
             View ret = null;
             int id = 0;
-            if (name != null) {
+            if (name != null)
+            {
                 // 使用反射动态获取多个控件的id
                 Class aClass = R.id.class;
-                try {
+                try
+                {
                     Field field = aClass.getDeclaredField(name);
                     field.setAccessible(true);
                     // 获取类成员的数值
                     id = field.getInt(aClass);
-                } catch (NoSuchFieldException e) {
+                }
+                catch (NoSuchFieldException e)
+                {
                     e.printStackTrace();
-                } catch (IllegalAccessException e) {
+                }
+                catch (IllegalAccessException e)
+                {
                     e.printStackTrace();
                 }
             }
-            if (id != 0) {
+            if (id != 0)
+            {
                 ret = getChildView(id);
             }
             return ret;
@@ -195,7 +220,8 @@ public class RecommendListAdapter extends RecyclerView.Adapter
          *
          * @param recommendItem
          */
-        void bindView(RecommendItem recommendItem) {
+        void bindView(RecommendItem recommendItem)
+        {
             TextView txt = (TextView) getChildView(R.id.item_recommend_text);
             txt.setText(recommendItem.getType());
         }
@@ -203,23 +229,31 @@ public class RecommendListAdapter extends RecyclerView.Adapter
 
     }
 
-    private static class RecommendViewViewHolder extends SimpleViewHolder implements View.OnClickListener {
+    private static class RecommendViewViewHolder extends SimpleViewHolder implements View.OnClickListener
+    {
 
-        public RecommendViewViewHolder(View itemView) {
+        public RecommendViewViewHolder(View itemView)
+        {
             super(itemView);
-            for (int i = 0; i < 4; i++) {
+            for (int i = 0; i < 4; i++)
+            {
                 View view = getChildView("item_commend_card_view_" + i);
-                if (view != null) {
+                if (view != null)
+                {
                     // 每一个Body内部视频点击事件
                     view.setOnClickListener(this);
                 }
             }
         }
+
         @Override
-        public void onClick(View v) {
+        public void onClick(View v)
+        {
             Object tag = v.getTag();
-            if (tag != null) {
-                if (tag instanceof RecommendBodyItem) {
+            if (tag != null)
+            {
+                if (tag instanceof RecommendBodyItem)
+                {
                     RecommendBodyItem bodyItem = (RecommendBodyItem) tag;
                     // EventBus 传递对象给 Fragment , 有Fragment来跳转到详情
                     EventBus.getDefault().post(bodyItem);
@@ -228,24 +262,29 @@ public class RecommendListAdapter extends RecyclerView.Adapter
         }
 
         @Override
-        void bindView(RecommendItem recommendItem) {
+        void bindView(RecommendItem recommendItem)
+        {
             TextView txtTitle = ((TextView) getChildView(R.id.item_recommend_head_title));
-            if (txtTitle != null) {
+            if (txtTitle != null)
+            {
                 txtTitle.setText(recommendItem.getHeadTitle());
             }
 
             //---------------------------
             // 条目 , 默认四个
             List<RecommendBodyItem> body = recommendItem.getBody();
-            if (body.size() >= 4) {
+            if (body.size() >= 4)
+            {
                 // 使用反射动态获取多个控件ID
-                for (int i = 0; i < body.size(); i++) {
+                for (int i = 0; i < body.size(); i++)
+                {
                     View view = getChildView("item_commend_card_view_" + i);
                     ImageView imageView = (ImageView) getChildView("item_commend_body_icon_" + i);
                     RecommendBodyItem bodyItem = body.get(i);
                     view.setTag(bodyItem);
                     String cover = bodyItem.getCover();
-                    if (cover != null) {
+                    if (cover != null)
+                    {
                         // TODO: 显示图片
                         Context context = imageView.getContext();
                         Picasso.with(context)
@@ -258,30 +297,37 @@ public class RecommendListAdapter extends RecyclerView.Adapter
 
 
                     TextView txtBodyTitle = (TextView) getChildView("item_commend_body_title_" + i);
-                    if (txtBodyTitle != null) {
+                    if (txtBodyTitle != null)
+                    {
                         String title = bodyItem.getTitle();
-                        if (title != null) {
+                        if (title != null)
+                        {
                             txtBodyTitle.setText(title);
                         }
                     }
 
                     TextView txtBodyCount = (TextView) getChildView("item_commend_body_count_" + i);
-                    if (txtBodyTitle != null) {
+                    if (txtBodyTitle != null)
+                    {
                         String play = bodyItem.getPlay();
-                        if (play != null) {
+                        if (play != null)
+                        {
                             txtBodyCount.setText(play);
                         }
                     }
 
                     TextView txtBodyDanMuKu = (TextView) getChildView("item_commend_body_danmaku_" + i);
-                    if (txtBodyTitle != null) {
+                    if (txtBodyTitle != null)
+                    {
                         String danMaKu = bodyItem.getDanmaku();
-                        if (danMaKu != null) {
+                        if (danMaKu != null)
+                        {
                             txtBodyDanMuKu.setText(danMaKu);
                         }
                     }
                 }
-            } else {
+            } else
+            {
                 // TODO: 代码动态添加布局
 
             }
@@ -289,37 +335,125 @@ public class RecommendListAdapter extends RecyclerView.Adapter
 
     }
 
-    private static class LiveViewViewHolder extends SimpleViewHolder {
+    private static class LiveViewViewHolder extends SimpleViewHolder implements  View.OnClickListener
+    {
 
-        public LiveViewViewHolder(View itemView) {
+        public LiveViewViewHolder(View itemView)
+        {
+            super(itemView);
+        }
+
+        @Override
+        void bindView(RecommendItem recommendItem)
+        {
+            TextView txtTitle = ((TextView) getChildView(R.id.item_recommend_live_head_title));
+            if (txtTitle != null)
+            {
+                txtTitle.setText(recommendItem.getHeadTitle());
+            }
+
+            //---------------------------
+            // 条目 , 默认四个
+            List<RecommendBodyItem> body = recommendItem.getBody();
+            if (body.size() >= 4)
+            {
+                // 使用反射动态获取多个控件ID
+                for (int i = 0; i < body.size(); i++)
+                {
+                    View view = getChildView("item_commend_card_live_view_" + i);
+                    ImageView imageView = (ImageView) getChildView("item_commend_live_body_icon_" + i);
+                    RecommendBodyItem bodyItem = body.get(i);
+                    view.setTag(bodyItem);
+                    String cover = bodyItem.getCover();
+                    if (cover != null)
+                    {
+                        // TODO: 显示图片
+                        Context context = imageView.getContext();
+                        Picasso.with(context)
+                                .load(cover)
+                                .config(Bitmap.Config.RGB_565)
+//                                .noFade() // 滑动的效果
+                                .resize(520, 350)
+                                .into(imageView);
+                    }
+
+
+                    TextView txtBodyTitle = (TextView) getChildView("item_commend_live_body_title_" + i);
+                    if (txtBodyTitle != null)
+                    {
+                        String title = bodyItem.getTitle();
+                        if (title != null)
+                        {
+                            txtBodyTitle.setText(title);
+                        }
+                    }
+
+                    TextView txtBodyUp = (TextView) getChildView("item_commend_live_body_author_" + i);
+                    if (txtBodyTitle != null)
+                    {
+                        String up = bodyItem.getUp();//获得up主的名字
+                        if (up != null)
+                        {
+                            txtBodyUp.setText(up);
+                        }
+                    }
+
+                    TextView txtBodyCount = (TextView) getChildView("item_commend_live_body_count_" + i);
+                    if (txtBodyTitle != null)
+                    {
+                        String Count = bodyItem.getDanmaku();
+                        if (Count != null)
+                        {
+                            txtBodyCount.setText(Count);
+                        }
+                    }
+                }
+            } else
+            {
+                // TODO: 代码动态添加布局
+
+            }
+        }
+
+        @Override
+        public void onClick(View v)
+        {
+
+        }
+    }
+
+    private static class Bangumi2ViewViewHolder extends SimpleViewHolder
+    {
+
+        public Bangumi2ViewViewHolder(View itemView)
+        {
             super(itemView);
         }
     }
 
-    private static class Bangumi2ViewViewHolder extends SimpleViewHolder {
+    private static class RegionViewViewHolder extends SimpleViewHolder
+    {
 
-        public Bangumi2ViewViewHolder(View itemView) {
+        public RegionViewViewHolder(View itemView)
+        {
             super(itemView);
         }
     }
 
-    private static class RegionViewViewHolder extends SimpleViewHolder {
+    private static class WebLinkViewViewHolder extends SimpleViewHolder
+    {
 
-        public RegionViewViewHolder(View itemView) {
+        public WebLinkViewViewHolder(View itemView)
+        {
             super(itemView);
         }
     }
 
-    private static class WebLinkViewViewHolder extends SimpleViewHolder {
+    private static class HuodongViewViewHolder extends SimpleViewHolder
+    {
 
-        public WebLinkViewViewHolder(View itemView) {
-            super(itemView);
-        }
-    }
-
-    private static class HuodongViewViewHolder extends SimpleViewHolder {
-
-        public HuodongViewViewHolder(View itemView) {
+        public HuodongViewViewHolder(View itemView)
+        {
             super(itemView);
         }
     }

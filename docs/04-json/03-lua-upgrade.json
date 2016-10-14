@@ -1,0 +1,413 @@
+{
+  "version": 414,
+  "list": [
+    {
+      "type": "file",
+      "path": "lua/lua-base/json/decode/composite.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-base/json/decode/composite.lua",
+      "md5": "2d9fe634eea5674d436b658a302d4d6c",
+      "size": 3366
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-base/json/decode/number.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-base/json/decode/number.lua",
+      "md5": "5d93fe416bf571559681b12c1e890f1c",
+      "size": 1863
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-base/json/decode/others.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-base/json/decode/others.lua",
+      "md5": "84eb2475bd5ddb46e30f75a9ca8caa0f",
+      "size": 905
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-base/json/decode/state.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-base/json/decode/state.lua",
+      "md5": "67813f574866168dc50969f219f1abad",
+      "size": 3950
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-base/json/decode/strings.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-base/json/decode/strings.lua",
+      "md5": "55b179f69c086c9393bb9f01073cb4f3",
+      "size": 2572
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-base/json/decode/util.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-base/json/decode/util.lua",
+      "md5": "28fd02682df2eee8148875f4fa203aff",
+      "size": 2839
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-base/json/decode.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-base/json/decode.lua",
+      "md5": "238f97b2bbf4426536e99b675093bb0d",
+      "size": 2553
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-base/json/encode/array.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-base/json/encode/array.lua",
+      "md5": "54ef1135e4b1496d671cab92fb01551a",
+      "size": 1495
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-base/json/encode/calls.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-base/json/encode/calls.lua",
+      "md5": "b350f4cd0327718eaba8f8707b28ac27",
+      "size": 1013
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-base/json/encode/number.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-base/json/encode/number.lua",
+      "md5": "c38207a67fa87c3b835815611ccc5e75",
+      "size": 944
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-base/json/encode/object.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-base/json/encode/object.lua",
+      "md5": "6d6b674e419c57e2f15cdedd440e9d8e",
+      "size": 1320
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-base/json/encode/others.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-base/json/encode/others.lua",
+      "md5": "b15a927bcbbbdc9238b46a8349ff2a03",
+      "size": 1081
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-base/json/encode/output.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-base/json/encode/output.lua",
+      "md5": "3a9dd51f3361d935ebcb5afd138e1c01",
+      "size": 1449
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-base/json/encode/output_utility.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-base/json/encode/output_utility.lua",
+      "md5": "9cbe375e66632f1015917df57041637e",
+      "size": 787
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-base/json/encode/strings.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-base/json/encode/strings.lua",
+      "md5": "c4ccbf02c6d5d878ed106f3e457819cf",
+      "size": 1409
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-base/json/encode.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-base/json/encode.lua",
+      "md5": "8c107915bad0b30e5a0376cc2f4a9c03",
+      "size": 2586
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-base/json/util.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-base/json/util.lua",
+      "md5": "a70593306b5ee59f860ac431ad6d0ea4",
+      "size": 2243
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-base/json.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-base/json.lua",
+      "md5": "ac1ef902928763131e5ab6f6041eb5ae",
+      "size": 438
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-base/ltn12.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-base/ltn12.lua",
+      "md5": "c919a83b8244c6a2bb4e3d72599e983f",
+      "size": 4983
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-base/LuaXml.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-base/LuaXml.lua",
+      "md5": "20706d403fd606a766a00f86e7a4b081",
+      "size": 2566
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-base/md5.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-base/md5.lua",
+      "md5": "fc587392a526c7fa4f4fc541e82fed64",
+      "size": 642
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-base/mime.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-base/mime.lua",
+      "md5": "43ce4b9effc3e121060354ee96ccd111",
+      "size": 1981
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-base/re.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-base/re.lua",
+      "md5": "745cb18be6d69d59378ce6817616bb08",
+      "size": 5633
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-base/socket/ftp.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-base/socket/ftp.lua",
+      "md5": "9b41cf1744145ba58954fccff253c031",
+      "size": 9013
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-base/socket/headers.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-base/socket/headers.lua",
+      "md5": "8237d1a34206ecafeaa130a010d3cf49",
+      "size": 3596
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-base/socket/http.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-base/socket/http.lua",
+      "md5": "7df2468f1422c16ad3c9de64e1278f19",
+      "size": 8429
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-base/socket/ltn12.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-base/socket/ltn12.lua",
+      "md5": "c6cf0740032a10e89c43508e74049ac5",
+      "size": 5025
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-base/socket/mbox.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-base/socket/mbox.lua",
+      "md5": "63a45456b2b5b817bf9f1046ea7a61b0",
+      "size": 2502
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-base/socket/mime.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-base/socket/mime.lua",
+      "md5": "43ce4b9effc3e121060354ee96ccd111",
+      "size": 1981
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-base/socket/smtp.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-base/socket/smtp.lua",
+      "md5": "6fcbe8de4546f4080215100da18e772c",
+      "size": 5982
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-base/socket/socket.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-base/socket/socket.lua",
+      "md5": "67b8bec8bd9ff4a789bb52a1ac756405",
+      "size": 3463
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-base/socket/tp.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-base/socket/tp.lua",
+      "md5": "5020b84755cb1ab1d3eaee6adef8778d",
+      "size": 2705
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-base/socket/url.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-base/socket/url.lua",
+      "md5": "2e4a3fe5d7340d4259dbb3050f79f9af",
+      "size": 5051
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-base/socket.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-base/socket.lua",
+      "md5": "2e96600062a948f194fd028cd934f67e",
+      "size": 3462
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-base/uuid.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-base/uuid.lua",
+      "md5": "786534b7a6d7cff909999621bf8d0ef0",
+      "size": 2942
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-bili/api.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-bili/api.lua",
+      "md5": "970b7b352d4f82d7c3712f15639a8b02",
+      "size": 8501
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-bili/bili/byte_buffer.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-bili/bili/byte_buffer.lua",
+      "md5": "97b85fde868339b9ffa24e84a432bb4d",
+      "size": 9532
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-bili/bili/byte_buffer_ptr.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-bili/bili/byte_buffer_ptr.lua",
+      "md5": "d139a6f1155032cc1003c6afbf66a3a5",
+      "size": 3346
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-bili/bili/int64_utility.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-bili/bili/int64_utility.lua",
+      "md5": "9595c1afdbaf4486d28c1d2658032426",
+      "size": 3854
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-bili/bili/model.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-bili/bili/model.lua",
+      "md5": "ce8bcce7328f29080007ec73526ed4db",
+      "size": 9686
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-bili/bili/utility.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-bili/bili/utility.lua",
+      "md5": "650b8ff99c324188ac5c060a08985af3",
+      "size": 5748
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-bili/misc_api.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-bili/misc_api.lua",
+      "md5": "49b79bcc7a1816f02b90fa839392a46b",
+      "size": 7992
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-bili/playurl/bb_1.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-bili/playurl/bb_1.lua",
+      "md5": "c48203a3bb4d7a76dadcc811b447a722",
+      "size": 9495
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-bili/playurl/bi_1.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-bili/playurl/bi_1.lua",
+      "md5": "60bff59165a8e503e50720dac710f4c1",
+      "size": 9100
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-bili/playurl/biliapi.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-bili/playurl/biliapi.lua",
+      "md5": "3f9f749b6216136bc3a944b596171e4c",
+      "size": 11058
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-bili/playurl/bl_1.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-bili/playurl/bl_1.lua",
+      "md5": "ea499e7be84f859777d99f14d65565cb",
+      "size": 11229
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-bili/playurl/bp_1.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-bili/playurl/bp_1.lua",
+      "md5": "f1c13640532ddcb0d918cf67949dcc50",
+      "size": 8526
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-bili/playurl/bq_1.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-bili/playurl/bq_1.lua",
+      "md5": "09a6aa87c0178597f37a09aad427dce4",
+      "size": 19300
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-bili/playurl/bs_1.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-bili/playurl/bs_1.lua",
+      "md5": "ccd0889b20e5589c798461cfaead0438",
+      "size": 4002
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-bili/playurl/bt_1.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-bili/playurl/bt_1.lua",
+      "md5": "680a1751777cb981d6a8cd97a6fdc296",
+      "size": 791
+    },
+    {
+      "type": "file",
+      "path": "lua/lua-bili/playurl/by_1.lua",
+      "ver": 414,
+      "url": "http://app.bilibili.com/mdata/android3/414/android3.upgrade/lua/lua-bili/playurl/by_1.lua",
+      "md5": "f9a8dfec69d343ce6c3058af4fd1e1b7",
+      "size": 8408
+    }
+  ]
+}
