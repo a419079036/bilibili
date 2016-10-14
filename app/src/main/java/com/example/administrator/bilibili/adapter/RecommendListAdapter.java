@@ -107,7 +107,10 @@ public class RecommendListAdapter extends RecyclerView.Adapter
                 ret = new Bangumi2ViewViewHolder(itemView);
                 break;
             case TYPE_REGION:
-                // TODO:
+
+                itemView = inflater.inflate(R.layout.item_recommend_region, parent, false);
+                ret = new RegionViewViewHolder(itemView);
+                break;
             case TYPE_WEB_LINK:
                 // TODO:
             case TYPE_HUDONG:
@@ -495,13 +498,13 @@ public class RecommendListAdapter extends RecyclerView.Adapter
                         }
                     }
 
-                    TextView txtBodyStatus = (TextView) getChildView("item_commend_bangumi_body_status_0" + i);
+                    TextView txtBodyStatus = (TextView) getChildView("item_commend_bangumi_body_status_" + i);
                     if (txtBodyStatus != null)
                     {
                         int status = bodyItem.getStatus();
                         if (status >0)
                         {
-                            txtBodyStatus.setText(status);
+                            txtBodyStatus.setText("第"+status+"话");
                         }
                     }
 
@@ -525,13 +528,101 @@ public class RecommendListAdapter extends RecyclerView.Adapter
 
     }
 
-    private static class RegionViewViewHolder extends SimpleViewHolder
+    private static class RegionViewViewHolder extends SimpleViewHolder implements View.OnClickListener
     {
 
         public RegionViewViewHolder(View itemView)
         {
             super(itemView);
+            for (int i = 0; i < 4; i++)
+            {
+                View view = getChildView("item_commend_region_card_view_" + i);
+                if (view != null)
+                {
+                    // 每一个Body内部视频点击事件
+                    view.setOnClickListener(this);
+                }
+            }
         }
+
+        @Override
+        public void onClick(View v)
+        {
+          //TODO:点击详情
+        }
+
+        @Override
+        void bindView(RecommendItem recommendItem)
+        {
+            TextView txtTitle = ((TextView) getChildView(R.id.item_recommend_region_head_title));
+            if (txtTitle != null)
+            {
+                txtTitle.setText(recommendItem.getHeadTitle());
+            }
+
+            //---------------------------
+            // 条目 , 默认四个
+            List<RecommendBodyItem> body = recommendItem.getBody();
+            if (body.size() >= 4)
+            {
+                // 使用反射动态获取多个控件ID
+                for (int i = 0; i < body.size(); i++)
+                {
+                    View view = getChildView("item_commend_region_card_view_" + i);
+                    ImageView imageView = (ImageView) getChildView("item_commend_region_body_icon_" + i);
+                    RecommendBodyItem bodyItem = body.get(i);
+                    view.setTag(bodyItem);
+                    String cover = bodyItem.getCover();
+                    if (cover != null)
+                    {
+                        // TODO: 显示图片
+                        Context context = imageView.getContext();
+                        Picasso.with(context)
+                                .load(cover)
+                                .config(Bitmap.Config.RGB_565)
+//                                .noFade() // 滑动的效果
+                                .resize(520, 350)
+                                .into(imageView);
+                    }
+
+
+                    TextView txtBodyTitle = (TextView) getChildView("item_commend_region_body_title_" + i);
+                    if (txtBodyTitle != null)
+                    {
+                        String title = bodyItem.getTitle();
+                        if (title != null)
+                        {
+                            txtBodyTitle.setText(title);
+                        }
+                    }
+
+                    TextView txtBodyCount = (TextView) getChildView("item_commend_region_body_count_" + i);
+                    if (txtBodyTitle != null)
+                    {
+                        String play = bodyItem.getPlay();
+                        if (play != null)
+                        {
+                            txtBodyCount.setText(play);
+                        }
+                    }
+
+                    TextView txtBodyDanMuKu = (TextView) getChildView("item_commend_region_body_danmaku_" + i);
+                    if (txtBodyTitle != null)
+                    {
+                        String danMaKu = bodyItem.getDanmaku();
+                        if (danMaKu != null)
+                        {
+                            txtBodyDanMuKu.setText(danMaKu);
+                        }
+                    }
+                }
+            } else
+            {
+                // TODO: 代码动态添加布局
+
+            }
+        }
+
     }
 
     private static class WebLinkViewViewHolder extends SimpleViewHolder
